@@ -1,0 +1,44 @@
+{
+  "name": "pinogoogle-cloud-logging",
+  "version": "1.0.0",
+  "description": "CLI that sends standard input to Google Cloud Stackdriver Logging.",
+  "main": "index.js",
+  "bin": {
+    "pino-google-cloud-logging": "./index.js"
+  },
+  "dependencies": {
+    "@google-cloud/logging": "^1.2.0",
+    "pull-split": "^0.2.0",
+    "pull-stream": "^3.6.8",
+    "rc": "^1.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^10.5.1",
+    "pull-stdio": "^1.0.0",
+    "typescript": "^2.9.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc --project ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seangenabe/google-cloud-logging-stream.git"
+  },
+  "keywords": [
+    "google",
+    "google cloud",
+    "stackdriver",
+    "stackdriver logging",
+    "stream",
+    "cli",
+    "stdin",
+    "pino"
+  ],
+  "author": "Sean Genabe <seanmarviolivergenabe@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seangenabe/google-cloud-logging-stream/issues"
+  },
+  "homepage": "https://github.com/seangenabe/google-cloud-logging-stream#readme"
+}
