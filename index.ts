@@ -16,11 +16,11 @@ export function googleCloudLoggingStream({ gclOptions, gclLogName }) {
       if (end) throw end
 
       let severity = 'info'
-      const metadata: Record<string, any> = {}
+      const metadata: Record<string, any> = { resource: { type: 'global' } }
       let entry
 
       try {
-        const { level, msg } = JSON.parse(data)
+        const { level } = JSON.parse(data)
         if (typeof level === 'number') {
           if (level >= 60) {
             severity = 'critical'
@@ -36,11 +36,8 @@ export function googleCloudLoggingStream({ gclOptions, gclLogName }) {
             severity = 'default'
           }
         }
-        Object.assign(metadata, data)
-        entry = log.entry(metadata, msg)
-      } catch (err) {
-        entry = log.entry(metadata, data)
-      }
+      } catch (err) {}
+      entry = log.entry(metadata, data)
 
       log[severity](entry).then(() => read(null, next), err => read(err, next))
     })
