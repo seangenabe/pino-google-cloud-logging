@@ -1,5 +1,5 @@
 {
-  "name": "pinogoogle-cloud-logging",
+  "name": "pino-google-cloud-logging",
   "version": "1.0.0",
   "description": "CLI that sends standard input to Google Cloud Stackdriver Logging.",
   "main": "index.js",
