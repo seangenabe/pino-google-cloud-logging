@@ -1,2 +1,4 @@
 *.ts
 .vscode
+.prettierignore
+.prettierrc.yml
